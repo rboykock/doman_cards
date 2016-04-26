@@ -41,10 +41,7 @@ public class SplashScreen extends AppCompatActivity {
         };
         splashTimer.start();
 
-        String app_dir=getFilesDir().getAbsolutePath();
-        Log.v("APPDIR", app_dir);
-        String img_dir=app_dir+"/images";
-        Log.v("IMGDIR", img_dir);
+
         /*
         viewPager=(ViewPager) findViewById(R.id.view_pager);
         Bitmap[] bitmaps_list=new Bitmap[6];

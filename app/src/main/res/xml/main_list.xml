@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<categorys>
+    <category name="fruts">
+        <icon>fruts.png</icon>
+        <part>fruts.xml</part>
+    </category>
+    <category name="animals">
+        <icon>animals.png</icon>
+        <part>animals.xml</part>
+    </category>
+</categorys>
