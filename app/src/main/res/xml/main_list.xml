@@ -1,11 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <categorys>
     <category name="fruts">
-        <icon>fruts.png</icon>
-        <part>fruts.xml</part>
+        <icon>frukty.png</icon>
+        <part>frukty.xml</part>
     </category>
     <category name="animals">
-        <icon>animals.png</icon>
+        <icon>frukty.png</icon>
+        <part>animals.xml</part>
+    </category>
+    <category name="fruts1">
+        <icon>frukty.png</icon>
+        <part>frukty.xml</part>
+    </category>
+    <category name="animals1">
+        <icon>frukty.png</icon>
+        <part>animals.xml</part>
+    </category>
+    <category name="fruts2">
+        <icon>frukty.png</icon>
+        <part>frukty.xml</part>
+    </category>
+    <category name="animals2">
+        <icon>frukty.png</icon>
+        <part>animals.xml</part>
+    </category>
+    <category name="fruts3">
+        <icon>frukty.png</icon>
+        <part>frukty.xml</part>
+    </category>
+    <category name="animals3">
+        <icon>frukty.png</icon>
+        <part>animals.xml</part>
+    </category>
+    <category name="fruts4">
+        <icon>frukty.png</icon>
+        <part>frukty.xml</part>
+    </category>
+    <category name="animals4">
+        <icon>frukty.png</icon>
+        <part>animals.xml</part>
+    </category>
+    <category name="fruts5">
+        <icon>frukty.png</icon>
+        <part>frukty.xml</part>
+    </category>
+    <category name="animals5">
+        <icon>frukty.png</icon>
+        <part>animals.xml</part>
+    </category>
+    <category name="fruts6">
+        <icon>frukty.png</icon>
+        <part>frukty.xml</part>
+    </category>
+    <category name="animals6">
+        <icon>frukty.png</icon>
+        <part>animals.xml</part>
+    </category>
+    <category name="fruts17">
+        <icon>frukty.png</icon>
+        <part>frukty.xml</part>
+    </category>
+    <category name="animals17">
+        <icon>frukty.png</icon>
+        <part>animals.xml</part>
+    </category>
+    <category name="fruts28">
+        <icon>frukty.png</icon>
+        <part>frukty.xml</part>
+    </category>
+    <category name="animals28">
+        <icon>frukty.png</icon>
+        <part>animals.xml</part>
+    </category>
+    <category name="fruts39">
+        <icon>frukty.png</icon>
+        <part>frukty.xml</part>
+    </category>
+    <category name="animals39">
+        <icon>frukty.png</icon>
+        <part>animals.xml</part>
+    </category>
+    <category name="fruts49">
+        <icon>frukty.png</icon>
+        <part>frukty.xml</part>
+    </category>
+    <category name="animals49">
+        <icon>frukty.png</icon>
+        <part>animals.xml</part>
+    </category>
+    <category name="fruts59">
+        <icon>frukty.png</icon>
+        <part>frukty.xml</part>
+    </category>
+    <category name="animals59">
+        <icon>frukty.png</icon>
         <part>animals.xml</part>
     </category>
 </categorys>
