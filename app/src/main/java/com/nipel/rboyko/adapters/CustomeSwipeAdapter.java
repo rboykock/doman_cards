@@ -1,4 +1,4 @@
-package com.nipel.rboyko.doman_cards;
+package com.nipel.rboyko.adapters;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.nipel.rboyko.doman_cards.R;
 
 /**
  * Created by rost on 15.04.2016.

@@ -9,6 +9,7 @@ import org.xmlpull.v1.XmlPullParser;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 /**
@@ -16,41 +17,63 @@ import java.util.Map;
  */
 public class MainScreenXml {
     private XmlPullParser category_xml;
-    private Map<String,ArrayList<String>> part_list=new HashMap<String,ArrayList<String>>();
+    private ArrayList<ArrayList> part_list=new ArrayList<ArrayList>();
 
     public MainScreenXml(String path) {
         parse();
     }
 
-    public MainScreenXml(XmlResourceParser res) {
-         category_xml = res;
+    public MainScreenXml(XmlPullParser xml) {
+         category_xml = xml;
          parse();
     }
 
-    public Map<String,ArrayList<String>> getPart_list(){
+    public ArrayList<ArrayList> getPart_list(){
         return part_list;
     }
 
     protected void parse(){
-        String key="";
+        Boolean lng=false;
+        Boolean title=false;
         ArrayList<String> value=null;
         try {
             while (category_xml.getEventType() != XmlPullParser.END_DOCUMENT) {
+
                 if(category_xml.getEventType()==XmlPullParser.START_TAG) {
                     if(category_xml.getName().equals("category")){
-                        Log.v("TAGNAME", category_xml.getAttributeValue(0));
-                        key=category_xml.getAttributeValue(0);
+                        Log.v("TAGNAME", '<'+category_xml.getName()+'>');
+                       // key=category_xml.getAttributeValue(0);
                         value=new ArrayList<String>();
+                    }
+                    if(category_xml.getName().equals("title")){
+                        title=true;
+                        if((category_xml.getAttributeName(0).equals("lng")) && (category_xml.getAttributeValue(0).equals("ua"))) {
+                              Log.v("TAGNAME", category_xml.getAttributeValue(0));
+                              lng=true;
+                        }
                     }
                 }
                 if (category_xml.getEventType() == XmlPullParser.TEXT) {
                     Log.v("TAGNAME", category_xml.getText());
-                    value.add(category_xml.getText());
+                    if(title){
+                        if(lng){
+                            value.add(category_xml.getText());
+                            lng=false;
+                        }else {
+                            category_xml.next();
+                            continue;
+                        }
+                    }else {
+                        value.add(category_xml.getText());
+                    }
                 }
                 if(category_xml.getEventType() ==XmlPullParser.END_TAG){
-                    if(category_xml.getName().equals("category")){
-                        Log.v("TAGNAME", category_xml.getName());
-                        part_list.put(key,value);
+                    if(category_xml.getName().equals("category")) {
+                        Log.v("TAGNAME", "</"+category_xml.getName()+'>');
+                        part_list.add(value);
+                    }
+                    if(category_xml.getName().equals("title")){
+                        title=false;
                     }
                 }
 
@@ -59,5 +82,6 @@ public class MainScreenXml {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        Log.v("TAGNAME","Done");
     }
 }

@@ -6,4 +6,6 @@
     <color name="whiteBG">#f4efef</color>
     <color name="vpbg">#f4e</color>
     <color name="title">#de2222</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>
